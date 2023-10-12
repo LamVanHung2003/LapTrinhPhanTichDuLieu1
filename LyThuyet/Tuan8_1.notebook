@@ -1,0 +1,8 @@
+Bias --> Cao ==> mô hình xấu (Underfitting)
+Bias--> thấp ==> mô hình tốt    
+    Tốt(đo bằng đại lượng variance) - tiêu cực(variance Cao) ==> học all những gì mà dữ liệu đang có và mô hình không còn khả năng sáng tạo
+        vd: ngày xưa học phép nhân là cách cốt lõi, học thêm bảng cửu chương quá chi tiết luôn, và ra cái mới làm không được vd 13*13
+        ==> gọi là Overfitting
+    tốt - tích cực(variance thấp) ==> học những cái cốt lõi để từ đó suy luận ra cái mới
+        ==> gọi là fitting
+1 học máy tốt là một học máy có độ bias thấp và Variance thấp
