@@ -1,0 +1,43 @@
+problem         --> DataCollection(Cào dl)  --> Cleaning (+ Black,duplucak,+ Enorr noise,+ Misssing Format  )    
+(Swfinition)        - Web                  |     
+                    Crawler                *    
+                    Beauty soup            EDA     
+                    scrapy                +Độ tập trung: count min max sum ,...
+                    Selinium              + Độ phân tán (Phân tán càng cao, độ ổn định thấp, đưa ra quyết định khó ):
+                    Survey                   Range,IQR,variance,std,SV
+                                          + hình dáng phân phối: Skewers(đôj siêng), Kurtosis(Độ nhọn Càng thin thì xác xuất nằm ở phần giữa )
+                                          + So sánh quan hệ: Cov, corr  >0 tương quan thuận <0 nghịch =0 không tương quan
+                                          + Chart: Pie, ban, Scatter, Hist, boxplot,line
+                                          + inferential(Suy diễn) Analysis: 
+                                                    * T-Test,Z-Test:1 biến định lượng  Kiểm định Giá trị trung bình( điểm số sinh viên)
+                                                    * Pearson Test: 2 biến định lượng (kiểm định tương quan)
+                                                    * Fisher, chíquane :2 biến định tính (có độc lập không) Vd giới tính, xếp loại 
+                                                    * Anova: 1 biến định tính 1 biến định lượng(One way, Two way): sự độc lập biến định lượng dựa trên biến định tính(lãi xuất, ngân hàng)
+                                                    * Lnear Regression(Analysis) nhiều biến định lượng khác : kiểm tra mức độ ảnh hưởng: 1 biến định lượng và biến mục 
+                                                    tiêu định lượng khác điểm thi toán đh có ảnh hưởng bởi điển toán phổ thông
+                                        P<0.05 ==> phụ thuộc
+                                        P>0.05 ==> không phụ thuộc
+                                       <br>
+                                       P> 0.05 ==>  không tương quan
+                                       p<0.05 ==> tương quan
+                                        p_value < 0.5 tương quan nghịch               
+ mức độ nhọn của dữ liệu 
+         from scipy.stats import kurtosis
+         kurt = kurtosis(df['QUANTITYORDERED'])
+         print(f'Giá trị kurtosis: {kurt}')
+
+
+
+       ===>Giữa kỳ
+
+
+    <h1>Cuối kỳ</h1>
+     * học máy + Supervied      ||   
+               + un-Supervied   || input ==> Coross         -Train --- Transformation(Log,SQRT,..)                           ||            --Linear regression(Hay sữ dụng)                     ||Đánh giá mô hình 
+               +Semi-Supervied  ||           Validation            --- Normalization(Maxscaler,Minmax)                       ||              hồi quy Y=A0+A1*X1+...                             ||(R-Score,MaE,MSE,RMSE,MAPE)  ||Underffity
+                                                                   --- Standandization (Z-Score)                             ||--> Model            * inteceptin                                ||biểu đồi Residua             ||*Bias cao  
+                                                                   --- One Hot Encoding                                      ||                     * Coff                                                                     ||Fitting
+                                                                   --- số ít đặc trưng lên ( Polynomial với một cái degree)  ||           -- Out put là giá trị định tính: Logistic Regression  ||R-Score, Accurracy, TP,FP,TN ||* Bias thấp, Varian thấp
+                                                                   ---> kỹ thuật dữ liệuliệu                                                    Z= A0+A1*X1                                     ||Recall, prccision            ||Overy Fitting
+                                                                                                                                                |Sigmoid                                        || F-Scrore,Ro                 ||* Bias thấp
+                                                                                                                                                Z==>(0.1)                                                                      ||* Varian ce
